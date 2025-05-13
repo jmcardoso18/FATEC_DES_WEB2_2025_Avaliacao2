@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Excluir Produto</title>
@@ -52,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
             padding: 30px;
             border-radius: 10px;
             display: inline-block;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         input[type="number"] {
@@ -61,6 +62,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
             border: 1px solid #ccc;
             border-radius: 8px;
             margin-bottom: 20px;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            background-color: #6c63ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        a.button:hover {
+            background-color: #4e47d4;
         }
 
         button {
@@ -74,6 +90,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
 
         button:hover {
             background-color: #c9302c;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
         }
 
         .mensagem {
@@ -90,6 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Excluir Produto por ID</h1>
@@ -107,9 +131,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
         </form>
 
     </main>
-    
-    <div style="text-align: center; margin-top: 20px;">
-        <a href="home.php">Voltar</a>
+
+    <div class="btn-container">
+        <a href="ler.php" class="button">Visualizar Produtos</a>
+        <a href="home.php" class="button">Voltar</a>
     </div>
 </body>
+
 </html>
